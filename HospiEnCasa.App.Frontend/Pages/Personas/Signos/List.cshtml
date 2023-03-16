@@ -1,0 +1,21 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.ListModel
+@{
+}
+
+
+<h1>Lista signos vitales</h1>
+<table class="table">
+    @foreach (var signo in Model.SignosPaciente)
+    {
+        <tr>
+            <td>@signo.Signo</td>
+            <td>@signo.Valor</td>
+            <td>@signo.FechaHora</td>
+        </tr>
+    }
+</table>
+
+<a class="btn-primary table-btn" asp-page="../List">
+<i aria-hidden="true"> regresar</i>
+</a>
